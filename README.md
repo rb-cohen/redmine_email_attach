@@ -9,7 +9,9 @@ This plugin attaches the HTML parts, and raw source of the email to the issue. U
 1. Checkout/download the plugin, and place it in your plugins directory (i.e. plugins/redmine_email_attach)
 2. Run the redmine plugin rake:
     `rake redmine:plugins:migrate RAILS_ENV=production`
-3. Run your email rake (e.g. redmine:email:receive_imap)
+3. Run your email rake (e.g. `redmine:email:receive_imap`)
+
+More detailed instructions are available on the Redmine wiki: http://www.redmine.org/projects/redmine/wiki/Plugins#Installing-a-plugin
 
 ## Assumptions
 
