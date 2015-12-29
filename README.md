@@ -1,6 +1,6 @@
 # Redmine Email Attachment Plugin
 
-This plugin attaches the HTML parts, and raw source of the email to the issue. Useful when Redmine has stripped out formatting/text that you need.
+This plugin attaches the HTML and raw source of the incoming email as attachments of the issue. Useful when Redmine has stripped out formatting/text that you need in the email rake.
 
 ## Getting started
 
