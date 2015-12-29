@@ -1,0 +1,27 @@
+# Redmine Email Attachment Plugin
+
+This plugin attaches the HTML parts, and raw source of the email to the issue. Useful when Redmine has stripped out formatting/text that you need.
+
+## Getting started
+
+### 1. Install the plugin
+
+1. Checkout/download the plugin, and place it in your plugins directory (i.e. plugins/redmine_email_attach)
+2. Run the redmine plugin rake:
+    `rake redmine:plugins:migrate RAILS_ENV=production`
+3. Run your email rake (e.g. redmine:email:receive_imap)
+
+## Assumptions
+
+* Redmine 3 running on a *nix-like system.
+* A working email rake
+
+## Troubleshooting
+
+### Check your logfile
+
+If you run into issues, your Redmine logfile might have some valuable information. The logfile is usually found in your Redmine directory in `log/production.log`.
+
+### Check plugin installation procedure
+
+http://www.redmine.org/projects/redmine/wiki/Plugins
