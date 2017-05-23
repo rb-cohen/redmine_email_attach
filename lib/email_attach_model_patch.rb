@@ -17,7 +17,7 @@ module EmailAttachMailHandlerPatch
       # add raw email as an attachment
       # Generate Timestamp for filename (Peter Pfläging)
       receivetime = Time.new
-      attachname = 'eMail-' + receivetime.strftime("%Y%m%d-%H%M%S%z") + '.'
+      attachname = 'Incoming Email ' + receivetime.strftime("%Y%m%d-%H%M%S%z")
       logger.info "MailHandler: adding raw attachments"
 
       if (parts = email.all_parts.select {|p| p.mime_type == 'text/html'}).present?
@@ -30,7 +30,7 @@ module EmailAttachMailHandlerPatch
           # Generate a file with the main content as HTML file
           obj.attachments << Attachment.create(:container => obj,
             :file => html_parts,
-            :filename => attachname + 'html',
+            :filename => attachname + '.html',
             :author => user,
             :content_type => 'text/html')
       end
@@ -39,7 +39,7 @@ module EmailAttachMailHandlerPatch
       # Outlook and Apple Mail are opening these files direct! (PP)
       obj.attachments << Attachment.create(:container => obj,
         :file => email.raw_source,
-        :filename => attachname + 'eml',
+        :filename => attachname + '.eml',
         :author => user,
         :content_type => 'message/rfc822')
     end
