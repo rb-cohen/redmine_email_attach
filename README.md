@@ -31,3 +31,5 @@ http://www.redmine.org/projects/redmine/wiki/Plugins
 ## Thanks
 
 Kudos to Joe Darkless for the inspiration and code snippet found in the patch on Redmine issue #8642: https://www.redmine.org/issues/8462
+
+Peter Pfläging <peter@pflaeging.net> for email attachment naming improvements
