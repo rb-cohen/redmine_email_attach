@@ -17,7 +17,7 @@ module EmailAttachMailHandlerPatch
       # add raw email as an attachment
       # Generate Timestamp for filename (Peter Pfläging)
       receivetime = Time.new
-      attachname = 'Incoming Email ' + receivetime.strftime("%Y-%m-%d %H:%M:%S%z")
+      attachname = 'Incoming Email ' + receivetime.strftime("%Y-%m-%dT%H%M%S%z")
       logger.info "MailHandler: adding raw attachments"
 
       if (parts = email.all_parts.select {|p| p.mime_type == 'text/html'}).present?
